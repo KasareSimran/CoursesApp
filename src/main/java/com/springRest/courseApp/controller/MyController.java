@@ -50,6 +50,10 @@ public class MyController   {
         return this.courseService.updateCourse(course);
     }
 
+
+
+
+    //delete course using id
     @DeleteMapping("/courses/{courseId}")
     public ResponseEntity<HttpStatus> deleteCourse(@PathVariable String courseId) {
         try {
