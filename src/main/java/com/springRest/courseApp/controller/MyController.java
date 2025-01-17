@@ -5,9 +5,7 @@ package com.springRest.courseApp.controller;
 import com.springRest.courseApp.model.Course;
 import com.springRest.courseApp.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,8 +28,16 @@ public class MyController   {
     }
 
 
+    //getting course by id
     @GetMapping("/courses/{courseId}")
     public Course getCourse(@PathVariable String courseId){
         return this.courseService.getCourse(Long.parseLong(courseId));
+    }
+
+
+    //adding the new course
+    @PostMapping("/courses")
+    public Course addCourse(@RequestBody Course course){
+        return this.courseService.addCourse(course);
     }
 }
