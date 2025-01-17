@@ -13,7 +13,7 @@ public class CourseServiceImpl implements CourseService{
     public CourseServiceImpl(){
             list=new ArrayList<>();
             list.add(new Course(123,"java course","you will learn basics java"));
-            list.add(new Course(1245,"spring course","you will learn basics of spring"));
+            list.add(new Course(124,"spring course","you will learn basics of spring"));
     }
     @Override
     public List<Course> getCourses() {
@@ -32,4 +32,13 @@ public class CourseServiceImpl implements CourseService{
         }
         return c;
     }
+
+    @Override
+    public Course addCourse(Course course) {
+
+        list.add(course);
+        return course;
+    }
+
+
 }
