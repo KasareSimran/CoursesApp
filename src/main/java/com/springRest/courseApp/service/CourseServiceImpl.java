@@ -13,10 +13,23 @@ public class CourseServiceImpl implements CourseService{
     public CourseServiceImpl(){
             list=new ArrayList<>();
             list.add(new Course(123,"java course","you will learn basics java"));
-            list.add(new Course(124,"spring course","you will learn basics of spring"));
+            list.add(new Course(1245,"spring course","you will learn basics of spring"));
     }
     @Override
     public List<Course> getCourses() {
         return list;
+    }
+
+    @Override
+    public Course getCourse(long courseId) {
+
+        Course c=null;
+        for(Course course:list){
+            if(course.getId()==courseId){
+                c=course;
+                break;
+            }
+        }
+        return c;
     }
 }
