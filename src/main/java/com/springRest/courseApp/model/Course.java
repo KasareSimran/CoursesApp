@@ -1,8 +1,13 @@
 package com.springRest.courseApp.model;
 
-import jakarta.persistence.*;
-import lombok.*;
-
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Entity
 @Data
 //@NoArgsConstructor
