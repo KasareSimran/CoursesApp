@@ -77,6 +77,12 @@ public class CourseServiceImpl implements CourseService{
 
     }
 
+//    @Override
+//    public List<Course> getCourses() {
+//        return repo.findAll().stream()
+//                .filter(course -> course.getId() != 0) // Exclude invalid entries
+//                .toList();
+//    }
 
     @Override
     public List<Course> getCourses() {
